@@ -22,7 +22,7 @@ O código foi desenhado aplicando princípios de **Orientação a Objetos (POO)*
 
 ### 1. Preparando o Ambiente
 Faça o clone do repositório para a sua máquina e entre na pasta do projeto:
-```bash
+
 git clone [https://github.com/Carlosgomes1500/quake_parser.git](https://github.com/Carlosgomes1500/quake_parser.git)
 cd quake_parser
 Crie e ative um ambiente virtual (venv) para isolar as dependências do projeto:
@@ -38,17 +38,15 @@ venv\Scripts\activate
 source venv/bin/activate
 Com o ambiente ativado, instale as dependências:
 
-Bash
 pip install -r requirements.txt
 
 ### 2. Rodando o Parser no Terminal (Tasks 1 e 2)
 Para processar o log e visualizar o relatório individual de cada jogo e o Ranking Geral direto no console, execute o orquestrador:
 
-Bash
 python main.py
+
 ### 3. Subindo a API Web (Task 3)
 Para expor os dados via API, inicie o servidor local rodando:
 
-Bash
 uvicorn api:app --reload
 A API estará rodando no endereço http://127.0.0.1:8000.
