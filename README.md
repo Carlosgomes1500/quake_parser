@@ -78,4 +78,9 @@ uvicorn api:app --reload
 
 A API estará rodando no endereço `http://127.0.0.1:8000`.
 
-```
+**Documentação Interativa (Swagger UI):**
+Com o servidor rodando, acesse `http://127.0.0.1:8000/docs` no seu navegador para explorar, visualizar e testar todos os endpoints da API de forma interativa. Através dessa interface, você terá acesso às seguintes rotas:
+
+* **`GET /`**: Rota raiz de boas-vindas, utilizada para verificar se a API está online (Health Check).
+* **`GET /api/games`**: Retorna o relatório completo contendo todas as partidas do log agrupadas.
+* **`GET /api/games/{game_id}`**: Busca os dados de uma partida específica. Você pode buscar passando apenas o número (ex: `2`) ou a chave completa (ex: `game_2`). Se o jogo não existir, a API retornará um erro 404 (Not Found).
