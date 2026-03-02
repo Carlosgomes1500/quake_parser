@@ -22,11 +22,11 @@ O código foi desenhado aplicando princípios de **Orientação a Objetos (POO)*
 
 ### 1. Preparando o Ambiente
 Faça o clone do repositório para a sua máquina e entre na pasta do projeto:
-
+```bash
 git clone [https://github.com/Carlosgomes1500/quake_parser.git](https://github.com/Carlosgomes1500/quake_parser.git)
 cd quake_parser
 Crie e ative um ambiente virtual (venv) para isolar as dependências do projeto:
-
+```
 #### Criando o ambiente virtual
     python -m venv venv
 
@@ -48,5 +48,5 @@ Para processar o log e visualizar o relatório individual de cada jogo e o Ranki
 Para expor os dados via API, inicie o servidor local rodando:
 
     uvicorn api:app --reload
-    
+
 A API estará rodando no endereço http://127.0.0.1:8000.
