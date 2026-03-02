@@ -25,8 +25,9 @@ Faça o clone do repositório para a sua máquina e entre na pasta do projeto:
 ```bash
 git clone [https://github.com/Carlosgomes1500/quake_parser.git](https://github.com/Carlosgomes1500/quake_parser.git)
 cd quake_parser
-Crie e ative um ambiente virtual (venv) para isolar as dependências do projeto:
 ```
+Crie e ative um ambiente virtual (venv) para isolar as dependências do projeto:
+
 #### Criando o ambiente virtual
     python -m venv venv
 
