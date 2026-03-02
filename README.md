@@ -27,23 +27,22 @@ git clone [https://github.com/Carlosgomes1500/quake_parser.git](https://github.c
 cd quake_parser
 Crie e ative um ambiente virtual (venv) para isolar as dependências do projeto:
 
-Bash
-# Criando o ambiente virtual
-python -m venv venv
+#### Criando o ambiente virtual
+    python -m venv venv
 
-# Ativando no Windows:
-venv\Scripts\activate
+#### Ativando no Windows:
+    venv\Scripts\activate
 
-# Ativando no Linux/Mac:
+#### Ativando no Linux/Mac:
 source venv/bin/activate
 Com o ambiente ativado, instale as dependências:
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 ### 2. Rodando o Parser no Terminal (Tasks 1 e 2)
 Para processar o log e visualizar o relatório individual de cada jogo e o Ranking Geral direto no console, execute o orquestrador:
 
-python main.py
+    python main.py
 
 ### 3. Subindo a API Web (Task 3)
 Para expor os dados via API, inicie o servidor local rodando:
