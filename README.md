@@ -47,5 +47,6 @@ Para processar o log e visualizar o relatório individual de cada jogo e o Ranki
 ### 3. Subindo a API Web (Task 3)
 Para expor os dados via API, inicie o servidor local rodando:
 
-uvicorn api:app --reload
+    uvicorn api:app --reload
+    
 A API estará rodando no endereço http://127.0.0.1:8000.
