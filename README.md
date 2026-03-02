@@ -11,7 +11,7 @@ O código foi desenhado aplicando princípios de **Orientação a Objetos (POO)*
 
 * **Separação de Domínio e Infraestrutura:** A classe `Game` (`models.py`) cuida exclusivamente do estado da partida e das regras de pontuação. Ela não sabe ler arquivos. Já a classe `QuakeLogParser` (`parser.py`) foca apenas em ler o arquivo de texto e usar Expressões Regulares (Regex) para extrair os dados. Isso torna o código fácil de testar e de manter.
 * **Uso de Regex:** Garante precisão ao capturar quem matou e quem morreu, mesmo que os nicks dos jogadores contenham espaços ou caracteres especiais.
-* **FastAPI para a Task 3:** O FastAPI foi adotado por ser um dos frameworks web mais rápidos e modernos do ecossistema Python. suporte nativo a tipagem assíncrona do Python e geração automática da documentação (Swagger UI) aceleram o desenvolvimento e garantem endpoints fáceis de testar.
+* **FastAPI para a Task 3:** O FastAPI foi adotado por ser um dos frameworks web mais rápidos e modernos do ecossistema Python. O suporte nativo a tipagem assíncrona do Python e a geração automática da documentação (Swagger UI) aceleram o desenvolvimento e garantem endpoints fáceis de testar.
 
 ## Requisitos
 
@@ -23,31 +23,59 @@ O código foi desenhado aplicando princípios de **Orientação a Objetos (POO)*
 ### 1. Preparando o Ambiente
 Faça o clone do repositório para a sua máquina e entre na pasta do projeto:
 ```bash
-git clone [https://github.com/Carlosgomes1500/quake_parser.git](https://github.com/Carlosgomes1500/quake_parser.git)
+git clone https://github.com/Carlosgomes1500/quake_parser.git
 cd quake_parser
+
 ```
+
 Crie e ative um ambiente virtual (venv) para isolar as dependências do projeto:
 
 #### Criando o ambiente virtual
-    python -m venv venv
+
+```bash
+python -m venv venv
+
+```
 
 #### Ativando no Windows:
-    venv\Scripts\activate
+
+```bash
+venv\Scripts\activate
+
+```
 
 #### Ativando no Linux/Mac:
+
+```bash
 source venv/bin/activate
+
+```
+
 Com o ambiente ativado, instale as dependências:
 
-    pip install -r requirements.txt
+```bash
+pip install -r requirements.txt
+
+```
 
 ### 2. Rodando o Parser no Terminal (Tasks 1 e 2)
+
 Para processar o log e visualizar o relatório individual de cada jogo e o Ranking Geral direto no console, execute o orquestrador:
 
-    python main.py
+```bash
+python main.py
+
+```
 
 ### 3. Subindo a API Web (Task 3)
+
 Para expor os dados via API, inicie o servidor local rodando:
 
-    uvicorn api:app --reload
+```bash
+uvicorn api:app --reload
 
-A API estará rodando no endereço http://127.0.0.1:8000.
+```
+
+A API estará rodando no endereço `http://127.0.0.1:8000`.
+
+```
