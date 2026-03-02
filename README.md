@@ -1,4 +1,4 @@
-# Quake Log Parser
+# Quake Parser
 
 ## Resumo do Projeto
 Este projeto é um parser construído para processar o arquivo de log `games.log` gerado pelo servidor de Quake 3 Arena. O sistema lê o arquivo, agrupa os dados de cada partida e contabiliza as mortes (kills) de cada jogador. 
@@ -7,11 +7,11 @@ O parser aplica regras de negócio específicas exigidas pelo desafio, como a pe
 
 ## Decisões Arquiteturais
 
-O código foi desenhado aplicando princípios de **Orientação a Objetos (POO)** e **SOLID**, com foco especial no **Princípio da Responsabilidade Única (SRP)**:
+O código foi desenhado aplicando princípios de **Orientação a Objetos (POO)** e **SOLID**, para assegurar o **Princípio da Responsabilidade Única (SRP)**:
 
 * **Separação de Domínio e Infraestrutura:** A classe `Game` (`models.py`) cuida exclusivamente do estado da partida e das regras de pontuação. Ela não sabe ler arquivos. Já a classe `QuakeLogParser` (`parser.py`) foca apenas em ler o arquivo de texto e usar Expressões Regulares (Regex) para extrair os dados. Isso torna o código fácil de testar e de manter.
 * **Uso de Regex:** Garante precisão ao capturar quem matou e quem morreu, mesmo que os nicks dos jogadores contenham espaços ou caracteres especiais.
-* **FastAPI para a Task 3:** A escolha do framework FastAPI se deu pela sua alta performance, suporte nativo a tipagem assíncrona do Python e geração automática da documentação (Swagger UI), o que facilita imensamente os testes da API.
+* **FastAPI para a Task 3:** O FastAPI foi adotado por ser um dos frameworks web mais rápidos e modernos do ecossistema Python. suporte nativo a tipagem assíncrona do Python e geração automática da documentação (Swagger UI) aceleram o desenvolvimento e garantem endpoints fáceis de testar.
 
 ## Requisitos
 
@@ -25,21 +25,30 @@ Faça o clone do repositório para a sua máquina e entre na pasta do projeto:
 ```bash
 git clone [https://github.com/Carlosgomes1500/quake_parser.git](https://github.com/Carlosgomes1500/quake_parser.git)
 cd quake_parser
-
-
-
-
-
-O objetivo desta atividade foi costruir um parser para o arquivo de log games.log.
-
 Crie e ative um ambiente virtual (venv) para isolar as dependências do projeto:
 
+Bash
+# Criando o ambiente virtual
+python -m venv venv
+
+# Ativando no Windows:
+venv\Scripts\activate
+
+# Ativando no Linux/Mac:
+source venv/bin/activate
 Com o ambiente ativado, instale as dependências:
 
-Rodando o Parser no Terminal (Tasks 1 e 2)
+Bash
+pip install -r requirements.txt
+
+### 2. Rodando o Parser no Terminal (Tasks 1 e 2)
 Para processar o log e visualizar o relatório individual de cada jogo e o Ranking Geral direto no console, execute o orquestrador:
 
-Subindo a API Web (Task 3)
+Bash
+python main.py
+### 3. Subindo a API Web (Task 3)
 Para expor os dados via API, inicie o servidor local rodando:
 
+Bash
+uvicorn api:app --reload
 A API estará rodando no endereço http://127.0.0.1:8000.
