@@ -84,3 +84,14 @@ Com o servidor rodando, acesse `http://127.0.0.1:8000/docs` no seu navegador par
 * **`GET /`**: Rota raiz de boas-vindas, utilizada para verificar se a API está online (Health Check).
 * **`GET /api/games`**: Retorna o relatório completo contendo todas as partidas do log agrupadas.
 * **`GET /api/games/{game_id}`**: Busca os dados de uma partida específica. Você pode buscar passando apenas o número (ex: `2`) ou a chave completa (ex: `game_2`). Se o jogo não existir, a API retornará um erro 404 (Not Found).
+
+## Testes Automatizados (Quality Assurance)
+
+Este projeto conta com uma suíte de testes automatizados construída com **Pytest** para garantir a integridade das regras de negócio (Domínio) e o funcionamento correto das rotas da API.
+
+Para rodar os testes na sua máquina, garanta que o ambiente virtual está ativado e execute o comando abaixo na raiz do projeto:
+
+```bash
+python -m pytest -v
+
+```
